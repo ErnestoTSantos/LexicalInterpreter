@@ -24,7 +24,7 @@ class LexiconInterpreter:
     def tokenize(self):
         token_specs = [
             ("RESERVED", r"\b(int|double|char|float|if|while|for)\b"),
-            ("IDENTIFIER", r"\b[A-Z][A-Za-z0-9_]*\b"),
+            ("IDENTIFIER", r"\b[A-Z][A-Za-z0-9]*\b"),  # Removido o underscore da expressão regular
             ("NUMBER", r"\b\d+(?:,\d+)?\b"),
             ("OPERATOR", r"[+\-*/=<>]"),
             ("DELIMITER", r"[;{}(),]"),
